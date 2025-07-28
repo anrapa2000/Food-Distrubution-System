@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import axios from "axios";
 import { MatchedDonation } from "../types/MatchedDonation";
+import MatchMap from "../components/MatchMap";
 
 interface EditingDonation {
   donationId: string;
@@ -190,6 +191,12 @@ const MyDonationsPage = () => {
           <p style={{ marginTop: "1rem" }}>
             Showing {filteredDonations.length} of {donations.length} donations
           </p>
+          
+          {/* Real-time Map */}
+          <div style={{ marginTop: "1rem" }}>
+            <h3>Map View</h3>
+            <MatchMap matches={filteredDonations} />
+          </div>
         </>
       )}
 
