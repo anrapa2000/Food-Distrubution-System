@@ -5,5 +5,9 @@ export interface DonationInput {
     lat: number;
     lon: number;
     timestamp: string;
+    category?: string;
+    condition?: "FRESH" | "GOOD" | "FAIR";
+    pickupInstructions?: string;
+    expiryTime: string;
   }
   

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { formatTimestamp, formatFullDate, getTimeAgo } from "../utils/dateUtils";
 
 interface Donation {
   id: string;
@@ -246,7 +247,7 @@ const AdminDashboardPage = () => {
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleString();
+    return formatTimestamp(dateString);
   };
 
   const getStatusColor = (status: string) => {
