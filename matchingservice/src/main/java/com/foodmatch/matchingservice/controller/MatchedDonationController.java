@@ -27,4 +27,10 @@ public class MatchedDonationController {
     public List<MatchedDonation> getMatchesByDonor(@PathVariable String donorId) {
         return repository.findByDonorId(donorId);
     }
+
+    // DELETE /matches/clear → clear all matches (for testing)
+    @DeleteMapping("/clear")
+    public void clearAllMatches() {
+        repository.deleteAll();
+    }
 }

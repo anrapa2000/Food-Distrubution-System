@@ -3,6 +3,7 @@ package com.foodmatch.matchingservice.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Column;
 
 @Entity
 @Table(name = "matched_donations")
@@ -18,6 +19,12 @@ public class MatchedDonation {
     private double lon;
     private int quantity;
     private String timestamp;
+
+    @Column
+    private Double ngoLat;
+
+    @Column
+    private Double ngoLon;
 
     // Getters and Setters
 
@@ -83,5 +90,21 @@ public class MatchedDonation {
 
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public Double getNgoLat() {
+        return ngoLat;
+    }
+
+    public void setNgoLat(Double ngoLat) {
+        this.ngoLat = ngoLat;
+    }
+
+    public Double getNgoLon() {
+        return ngoLon;
+    }
+
+    public void setNgoLon(Double ngoLon) {
+        this.ngoLon = ngoLon;
     }
 }

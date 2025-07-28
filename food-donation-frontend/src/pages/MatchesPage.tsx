@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchAllMatches, fetchMatchesByDonor } from "../api/matchedDonations";
 import { MatchedDonation } from "../types/MatchedDonation";
+import MatchMap from "../components/MatchMap";
 
 const MatchesPage = () => {
   const [matches, setMatches] = useState<MatchedDonation[]>([]);
@@ -34,6 +35,7 @@ const MatchesPage = () => {
   return (
     <div style={{ padding: "1rem" }}>
       <h2>Matched Donations</h2>
+      <MatchMap matches={matches} />
 
       <div style={{ marginBottom: "1rem" }}>
         <input

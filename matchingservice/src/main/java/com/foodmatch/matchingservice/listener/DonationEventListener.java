@@ -42,6 +42,8 @@ public class DonationEventListener {
             match.setTimestamp(event.getTimestamp());
             match.setNgoId(matchedNgo.getId());
             match.setNgoName(matchedNgo.getName());
+            match.setNgoLat(matchedNgo.getLat());
+            match.setNgoLon(matchedNgo.getLon());
 
             matchedDonationRepo.save(match);
         } else {

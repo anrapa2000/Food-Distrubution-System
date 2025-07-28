@@ -7,5 +7,6 @@ export interface MatchedDonation {
     lon: number;
     quantity: number;
     timestamp: string;
+    ngoLat: number;
+    ngoLon: number;
   }
-  
