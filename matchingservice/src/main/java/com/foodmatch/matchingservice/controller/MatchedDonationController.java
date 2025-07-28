@@ -33,4 +33,22 @@ public class MatchedDonationController {
     public void clearAllMatches() {
         repository.deleteAll();
     }
+
+    // PUT /matches/{donationId} → update a specific match
+    @PutMapping("/{donationId}")
+    public MatchedDonation updateMatch(@PathVariable String donationId, @RequestBody MatchedDonation updateRequest) {
+        MatchedDonation existing = repository.findById(donationId)
+            .orElseThrow(() -> new RuntimeException("Match not found"));
+        
+        existing.setQuantity(updateRequest.getQuantity());
+        existing.setNgoName(updateRequest.getNgoName());
+        
+        return repository.save(existing);
+    }
+
+    // DELETE /matches/{donationId} → delete a specific match
+    @DeleteMapping("/{donationId}")
+    public void deleteMatch(@PathVariable String donationId) {
+        repository.deleteById(donationId);
+    }
 }
