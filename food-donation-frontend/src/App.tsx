@@ -5,6 +5,7 @@ import MyDonationsPage from "./pages/MyDonationsPage";
 import NgoLoginPage from "./pages/NgoLoginPage";
 import NgoDashboardPage from "./pages/NgoDashboardPage";
 import DonationOffersPage from "./pages/DonationOffersPage";
+import NgoRequestsPage from "./pages/NgoRequestsPage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/ngo-login" element={<NgoLoginPage />} />
           <Route path="/ngo-dashboard" element={<NgoDashboardPage />} />
           <Route path="/donation-offers" element={<DonationOffersPage />} />
+          <Route path="/ngo-requests" element={<NgoRequestsPage />} />
         </Routes>
       </div>
     </Router>

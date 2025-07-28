@@ -114,18 +114,21 @@ const NgoDashboardPage = () => {
           >
             View Donation Offers
           </button>
-          <button style={{
-            display: "block",
-            width: "100%",
-            marginBottom: "0.5rem",
-            padding: "0.5rem",
-            backgroundColor: "#2196f3",
-            color: "white",
-            border: "none",
-            borderRadius: "4px",
-            cursor: "pointer"
-          }}>
-            Update Profile
+          <button 
+            onClick={() => navigate("/ngo-requests")}
+            style={{
+              display: "block",
+              width: "100%",
+              marginBottom: "0.5rem",
+              padding: "0.5rem",
+              backgroundColor: "#2196f3",
+              color: "white",
+              border: "none",
+              borderRadius: "4px",
+              cursor: "pointer"
+            }}
+          >
+            My Requests
           </button>
           <button style={{
             display: "block",
