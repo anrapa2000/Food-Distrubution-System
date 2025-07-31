@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { formatTimestamp, formatFullDate, getTimeAgo } from "../utils/dateUtils";
+import CacheMonitor from "../components/CacheMonitor";
 
 interface Donation {
   id: string;
@@ -306,6 +307,11 @@ const AdminDashboardPage = () => {
         >
           ← Back to Home
         </button>
+      </div>
+
+      {/* Cache Monitor */}
+      <div style={{ marginBottom: "2rem" }}>
+        <CacheMonitor />
       </div>
 
       {/* Analytics Cards */}
